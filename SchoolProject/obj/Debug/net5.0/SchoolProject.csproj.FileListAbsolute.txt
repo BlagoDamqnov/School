@@ -1,0 +1,16 @@
+C:\Users\chess\Desktop\SchoolProject\SchoolProject\bin\Debug\net5.0\SchoolProject.exe
+C:\Users\chess\Desktop\SchoolProject\SchoolProject\bin\Debug\net5.0\SchoolProject.deps.json
+C:\Users\chess\Desktop\SchoolProject\SchoolProject\bin\Debug\net5.0\SchoolProject.runtimeconfig.json
+C:\Users\chess\Desktop\SchoolProject\SchoolProject\bin\Debug\net5.0\SchoolProject.runtimeconfig.dev.json
+C:\Users\chess\Desktop\SchoolProject\SchoolProject\bin\Debug\net5.0\SchoolProject.dll
+C:\Users\chess\Desktop\SchoolProject\SchoolProject\bin\Debug\net5.0\SchoolProject.pdb
+C:\Users\chess\Desktop\SchoolProject\SchoolProject\obj\Debug\net5.0\SchoolProject.csproj.AssemblyReference.cache
+C:\Users\chess\Desktop\SchoolProject\SchoolProject\obj\Debug\net5.0\SchoolProject.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\chess\Desktop\SchoolProject\SchoolProject\obj\Debug\net5.0\SchoolProject.AssemblyInfoInputs.cache
+C:\Users\chess\Desktop\SchoolProject\SchoolProject\obj\Debug\net5.0\SchoolProject.AssemblyInfo.cs
+C:\Users\chess\Desktop\SchoolProject\SchoolProject\obj\Debug\net5.0\SchoolProject.csproj.CoreCompileInputs.cache
+C:\Users\chess\Desktop\SchoolProject\SchoolProject\obj\Debug\net5.0\SchoolProject.dll
+C:\Users\chess\Desktop\SchoolProject\SchoolProject\obj\Debug\net5.0\refint\SchoolProject.dll
+C:\Users\chess\Desktop\SchoolProject\SchoolProject\obj\Debug\net5.0\SchoolProject.pdb
+C:\Users\chess\Desktop\SchoolProject\SchoolProject\obj\Debug\net5.0\SchoolProject.genruntimeconfig.cache
+C:\Users\chess\Desktop\SchoolProject\SchoolProject\obj\Debug\net5.0\ref\SchoolProject.dll
