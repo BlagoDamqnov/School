@@ -8,11 +8,17 @@ namespace SchoolProject
 {
     public class Users
     {
+        private string street;
         private int IdUser;
         private double dailyElectricity;
         private double nightElectricity;
-        private double KwHourPrice;
+        private double feePrice;
 
+        public string Street
+        {
+            get { return street; }
+            set { street = value; }
+        }
         public int IDUser
         {
             get { return IdUser; }
@@ -31,22 +37,23 @@ namespace SchoolProject
             set { nightElectricity = value; }
         }
 
-        public double KWHourPrice
+        public double FeePrice
         {
-            get { return KWHourPrice; }
-            set { KWHourPrice = value; }
+            get { return feePrice; }
+            set { feePrice = value; }
         }
-        public Users(int IdUser, double dailyElectricity, double nightElectricity, double KwHourPrice)
+        public Users(string street,int IdUser, double dailyElectricity, double nightElectricity, double feePrice)
         {
+            this.street=street;
             this.IdUser = IdUser;
             this.dailyElectricity = dailyElectricity;
             this.nightElectricity = nightElectricity;
-            this.KwHourPrice = KwHourPrice;
+            this.feePrice = feePrice;
         }
 
         public double  TransferElectricityFee()
         {
-            return KwHourPrice * 0.10;
+            return Math.Round((DailyElectricity+NightElectricity) * 0.10,2);
         }
     }
 }

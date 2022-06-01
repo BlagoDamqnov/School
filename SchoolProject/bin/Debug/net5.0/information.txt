@@ -1,6 +1,0 @@
-1. UserId: 1 ==> DailyElectricyty: 12, NightElectricyty: 13 FeePerHour: 10, TotalTransferMoney 1lv.
-2. UserId: 2 ==> DailyElectricyty: 10, NightElectricyty: 15 FeePerHour: 20, TotalTransferMoney 2lv.
-3. UserId: 3 ==> DailyElectricyty: 11, NightElectricyty: 14,5 FeePerHour: 11,45, TotalTransferMoney 1,145lv.
-4. UserId: 4 ==> DailyElectricyty: 21, NightElectricyty: 18 FeePerHour: 8,12, TotalTransferMoney 0,8119999999999999lv.
-5. UserId: 5 ==> DailyElectricyty: 10, NightElectricyty: 8 FeePerHour: 4,45, TotalTransferMoney 0,44500000000000006lv.
-6. UserId: 6 ==> DailyElectricyty: 30, NightElectricyty: 24 FeePerHour: 2,25, TotalTransferMoney 0,225lv.
