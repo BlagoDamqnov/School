@@ -10,7 +10,7 @@ namespace SchoolProject
         {
              Dictionary<string,Dictionary<int,List<double>>> dic = new Dictionary<string,Dictionary<int,List<double>>>();
 
-             Console.WriteLine("Enter how many do you want?");
+             Console.WriteLine("Enter count of street?");
              int countStreet=int.Parse(Console.ReadLine());
 
               Console.WriteLine();
@@ -29,8 +29,17 @@ namespace SchoolProject
                     sw.WriteLine("StreetName is: {0}", street);
                     sw.WriteLine();
 
-                    Console.WriteLine("UserId | Daily | Night | FeePerHour");
+                    if (!dic.ContainsKey(street))
+                    {
+                        dic.Add(street, new Dictionary<int, List<double>>());
 
+                    }
+                    else
+                    {
+                        Console.WriteLine("Adress is already exist");
+                        return;
+                    }
+                    Console.WriteLine("UserId | Daily | Night | FeePerHour");
                     try
                     {
                         string[] command = Console.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries);
@@ -44,35 +53,41 @@ namespace SchoolProject
                             double nightEelctricyty = double.Parse(command[2]);
                             double feePerHour = double.Parse(command[3]);
 
-                            Users user = new Users(street,UserId, dailyElectricity, nightEelctricyty, feePerHour);
 
-                            if (!dic.ContainsKey(street))
-                            {
-                                dic.Add(street, new Dictionary<int, List<double>>());
+                                Users user = new Users(street, UserId, dailyElectricity, nightEelctricyty, feePerHour);
+
+                                if (!dic.ContainsKey(street))
+                                {
+                                    dic.Add(street, new Dictionary<int, List<double>>());
+                                }
+                                if (!dic[street].ContainsKey(UserId))
+                                {
+                                    dic[user.Street].Add(UserId, new List<double>() { counter, user.DailyElectricity, user.NightElectricity, user.FeePrice, user.TransferElectricityFee() });
+                                }
+                                else
+                                {
+                                    Console.WriteLine("User Id is already done");
+                                    return;
+                                }
+
+                                Console.WriteLine("------------------------------------");
+
+
+                                sw.WriteLine("{0}. UserId: {1} ==> DailyElectricyty: {2}, NightElectricyty: {3} FeePerHour: {4}, TotalTransferMoney {5}lv.", counter, user.IDUser, user.DailyElectricity, user.NightElectricity, user.FeePrice, user.TransferElectricityFee());
+
+                                sw.WriteLine();
+
+                                command = Console.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries);
                             }
-                            if (!dic[street].ContainsKey(UserId))
-                            {
-                                dic[user.Street].Add(UserId, new List<double>() {counter, user.DailyElectricity, user.NightElectricity, user.FeePrice, user.TransferElectricityFee() });
-                            }
-                            else
-                            {
-                                Console.WriteLine("User Id is already done");
-                                return;
-                            }
-
-                            Console.WriteLine("------------------------------------");
-
-                           
-                            sw.WriteLine("{0}. UserId: {1} ==> DailyElectricyty: {2}, NightElectricyty: {3} FeePerHour: {4}, TotalTransferMoney {5}lv.", counter, user.IDUser, user.DailyElectricity, user.NightElectricity, user.FeePrice, user.TransferElectricityFee());
-
-                            sw.WriteLine();
-
-                            command = Console.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries);
-                        }
                     }
                     catch (FormatException)
                     {
                         Console.WriteLine("Invalid enter data! Please try again!");
+                    }
+                    catch(IndexOutOfRangeException)
+                    {
+                        Console.WriteLine("Please enter data");
+                        return;
                     }
                 }
             }
